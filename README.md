@@ -33,9 +33,6 @@ activity logs, and background jobs.
 git clone <repo-url>
 cd backend
 npm install
-connect to mysql
-SOURCE sql/schema.sql;
-SHOW TABLES;
 
 .env
 PORT=5000
@@ -47,6 +44,13 @@ DB_NAME=centralized_ops
 
 JWT_SECRET=supersecret
 JWT_EXPIRES_IN=1d
+
+CREATE DATABASE centralized_ops;
+USE centralized_ops;
+SOURCE sql/schema.sql;
+SOURCE sql/seed.sql;
+SHOW TABLES;
+mysql -u root -p
 
 npm run dev
 
