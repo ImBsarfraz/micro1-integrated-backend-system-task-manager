@@ -45,12 +45,13 @@ DB_NAME=centralized_ops
 JWT_SECRET=supersecret
 JWT_EXPIRES_IN=1d
 
+mysql -u root -p
 CREATE DATABASE centralized_ops;
 USE centralized_ops;
 SOURCE sql/schema.sql;
 SOURCE sql/seed.sql;
 SHOW TABLES;
-mysql -u root -p
+
 
 npm run dev
 
